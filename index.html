@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Kelly Wang - Researcher & Educator | Digital CV</title>
+    <meta name="title" content="Kelly Wang - Researcher & Educator | Digital CV" />
+    <meta name="description" content="Kelly Wang is a researcher and educator. Explore her publications, research interests, certifications, and professional experience." />
+    <meta name="keywords" content="Kelly Wang, researcher, educator, CV, portfolio, publications, academic" />
+    <meta name="author" content="Kelly Wang" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Theme & App Colors -->
+    <meta name="theme-color" content="#FF007F" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="msapplication-TileColor" content="#FF007F" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kellywang.com/" />
+    <meta property="og:title" content="Kelly Wang - Researcher & Educator | Digital CV" />
+    <meta property="og:description" content="Kelly Wang is a researcher and educator. Explore her publications, research interests, certifications, and professional experience." />
+    <meta property="og:image" content="./assets/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Kelly Wang" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://kellywang.com/" />
+    <meta name="twitter:title" content="Kelly Wang - Researcher & Educator | Digital CV" />
+    <meta name="twitter:description" content="Kelly Wang is a researcher and educator. Explore her publications, research interests, certifications, and professional experience." />
+    <meta name="twitter:image" content="./assets/og-image.png" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./src/assets/Vector.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/assets/Vector.svg" />
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://www.clarity.ms" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.clarity.ms" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="./src/assets/Vector.svg" as="image" type="image/svg+xml" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+    
+    <!-- Critical inline styles for faster FCP -->
+    <style>
+      /* Critical CSS - prevents layout shift */
+      html { scroll-behavior: smooth; }
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+      #app { min-height: 100vh; }
+      .dark { background-color: #000; color: #fff; }
+    </style>
+    
+    <!-- Google Analytics - loaded async -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Microsoft Clarity - loaded async -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ui45b3qqcg");
+    </script>
+  </head>
+  <body>
+    <!-- No-JS fallback -->
+    <noscript>
+      <div style="padding: 2rem; text-align: center; font-family: sans-serif;">
+        <h1>Kelly Wang - Digital CV</h1>
+        <p>Please enable JavaScript to view this website.</p>
+      </div>
+    </noscript>
+    
+    <div id="app"></div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

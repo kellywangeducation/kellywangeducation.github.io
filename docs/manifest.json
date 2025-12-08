@@ -1,0 +1,22 @@
+{
+  "name": "Kelly Wang - Digital CV",
+  "short_name": "Kelly Wang",
+  "description": "Kelly Wang is a researcher and educator. Explore her publications, research interests, certifications, and professional experience.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFF5F9",
+  "theme_color": "#FF007F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./src/assets/Vector.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "portfolio"],
+  "lang": "en",
+  "dir": "ltr"
+}

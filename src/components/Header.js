@@ -37,35 +37,49 @@ export function renderHeader() {
     </header>
 
     <!-- Mobile Nav Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white dark:bg-apple-dark transform translate-x-full transition-transform duration-300 xl:hidden z-[60] flex flex-col">
-      <!-- Scrollable Nav Items -->
-      <div class="flex-1 overflow-y-auto pt-20 px-8 flex flex-col gap-6">
-        <button id="mobile-menu-close" class="absolute top-8 right-8 p-2 text-slate-900 dark:text-slate-100 z-10">
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-3xl transform translate-x-full transition-transform duration-500 xl:hidden z-[60] flex flex-col overflow-hidden">
+      
+      <!-- Decorative Background Blobs -->
+      <div class="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-accent-pink/20 rounded-full blur-[100px] pointer-events-none animate-pulse"></div>
+      <div class="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] bg-purple-500/20 rounded-full blur-[80px] pointer-events-none animate-pulse" style="animation-delay: 1s"></div>
+
+      <!-- Header with Close Button -->
+      <div class="flex justify-end p-8 relative z-20">
+        <button id="mobile-menu-close" class="p-3 rounded-full bg-slate-100/50 dark:bg-white/10 text-slate-900 dark:text-white hover:rotate-90 transition-all duration-300 shadow-sm border border-white/20 hover:scale-110">
           <i data-lucide="x" class="w-8 h-8"></i>
         </button>
-        <a href="#about" class="text-3xl font-bold mobile-link text-slate-900 dark:text-white">About</a>
-        <a href="#research" class="text-3xl font-bold mobile-link text-slate-900 dark:text-white">Research</a>
-        <a href="#experience" class="text-3xl font-bold mobile-link text-slate-900 dark:text-white">Experience & Education</a>
-        <a href="#publications" class="text-3xl font-bold mobile-link text-slate-900 dark:text-white">Publications & Conferences</a>
-        <a href="#courses" class="text-3xl font-bold mobile-link text-slate-900 dark:text-white">Teaching</a>
-        <a href="#certifications" class="text-3xl font-bold mobile-link text-slate-900 dark:text-white">Certifications</a>
-        <a href="#additional-experience" class="text-3xl font-bold mobile-link text-slate-900 dark:text-white">Additional Experience</a>
-        <a href="#contact" class="text-3xl font-bold mobile-link text-slate-900 dark:text-white">Contact</a>
+      </div>
+
+      <!-- Main Nav Items - Centered -->
+      <div class="flex-1 flex flex-col justify-center px-12 gap-8 relative z-10">
+        <nav class="flex flex-col gap-6" id="mobile-nav-links">
+            <a href="#about" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 100ms">About</a>
+            <a href="#research" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 150ms">Research</a>
+            <a href="#experience" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 200ms">Experience</a>
+            <a href="#publications" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 250ms">Publications</a>
+            <a href="#courses" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 300ms">Teaching</a>
+            <a href="#certifications" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 350ms">Certifications</a>
+            <a href="#additional-experience" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 400ms">More Exp.</a>
+            <a href="#contact" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 450ms">Contact</a>
+        </nav>
         
-        <div class="mt-4 pt-8 border-t border-slate-100 dark:border-neutral-800 pb-10">
-            <button id="mobile-theme-toggle" class="flex items-center gap-3 text-xl font-medium text-slate-600 dark:text-slate-300">
+        <div class="mt-4 pt-8 border-t border-slate-200/50 dark:border-white/10 w-full max-w-xs transition-all duration-500 transform translate-y-10 opacity-0 delay-500" id="mobile-extras">
+            <button id="mobile-theme-toggle" class="flex items-center gap-3 text-xl font-medium text-slate-600 dark:text-slate-300 hover:text-accent-pink transition-colors">
             <span class="dark:hidden">Dark Mode</span>
             <span class="hidden dark:block">Light Mode</span>
+            <div class="w-10 h-6 bg-slate-200 dark:bg-white/20 rounded-full relative ml-auto">
+                <div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow-sm transition-transform duration-300 dark:translate-x-4"></div>
+            </div>
           </button>
         </div>
       </div>
 
-      <!-- Mobile Menu Footer (Fixed at bottom) -->
-      <div class="p-6 border-t border-slate-100 dark:border-neutral-800 text-center text-slate-500 dark:text-slate-400 text-sm bg-white dark:bg-apple-dark shrink-0" id="mobile-menu-footer">
-        <p class="mb-4">&copy; 2026 <span class="dark:text-white">Kelly Wang.</span></p>
+      <!-- Mobile Menu Footer -->
+      <div class="p-8 text-center text-slate-400 dark:text-slate-500 text-xs shrink-0 relative z-10 transition-all duration-500 transform translate-y-10 opacity-0 delay-700" id="mobile-footer">
+        <p class="mb-4 font-medium uppercase tracking-widest">&copy; 2026 Kelly Wang.</p>
         <div class="flex justify-center gap-6">
-            <a href="#" class="hover:text-accent-pink transition-colors">Privacy Policy</a>
-            <a href="#" class="hover:text-accent-pink transition-colors">Terms of Use</a>
+            <a href="#" class="hover:text-accent-pink transition-colors">Privacy</a>
+            <a href="#" class="hover:text-accent-pink transition-colors">Terms</a>
         </div>
       </div>
     </div>
@@ -82,6 +96,8 @@ export function initHeader() {
   const mobileMenuClose = document.getElementById('mobile-menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
+  const mobileExtras = document.getElementById('mobile-extras');
+  const mobileFooter = document.getElementById('mobile-footer');
 
   // Scroll effect
   window.addEventListener('scroll', () => {
@@ -115,13 +131,32 @@ export function initHeader() {
 
   // Mobile menu logic
   function toggleMenu() {
-    const isOpen = !mobileMenu.classList.contains('translate-x-full');
-    if (isOpen) {
-      mobileMenu.classList.add('translate-x-full');
-      document.body.style.overflow = '';
-    } else {
+    const isClosed = mobileMenu.classList.contains('translate-x-full');
+    
+    if (isClosed) {
+      // Open menu
       mobileMenu.classList.remove('translate-x-full');
       document.body.style.overflow = 'hidden';
+      
+      // Trigger animations
+      requestAnimationFrame(() => {
+        mobileLinks.forEach(link => {
+            link.classList.remove('translate-x-10', 'opacity-0');
+        });
+        if(mobileExtras) mobileExtras.classList.remove('translate-y-10', 'opacity-0');
+        if(mobileFooter) mobileFooter.classList.remove('translate-y-10', 'opacity-0');
+      });
+    } else {
+      // Close menu
+      mobileMenu.classList.add('translate-x-full');
+      document.body.style.overflow = '';
+      
+      // Reset animations
+      mobileLinks.forEach(link => {
+          link.classList.add('translate-x-10', 'opacity-0');
+      });
+      if(mobileExtras) mobileExtras.classList.add('translate-y-10', 'opacity-0');
+      if(mobileFooter) mobileFooter.classList.add('translate-y-10', 'opacity-0');
     }
   }
 

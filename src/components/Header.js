@@ -9,7 +9,7 @@ export function renderHeader() {
         <!-- Logo -->
         <a href="#" class="flex items-center gap-3 hover:opacity-80 transition-opacity group">
           <img src="${Logo}" alt="Kelly Wang Logo" class="w-10 h-10 group-hover:scale-90 transition-transform duration-300" width="40" height="40" loading="eager">
-          <span class="text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-white pb-2">Kelly Wang</span>
+          <span class="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-white py-1">Kelly Wang</span>
         </a>
 
         <!-- Desktop Nav -->
@@ -82,7 +82,6 @@ export function initHeader() {
   const mobileMenuClose = document.getElementById('mobile-menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
-  const mobileExtras = document.getElementById('mobile-extras');
 
   // Scroll effect
   window.addEventListener('scroll', () => {
@@ -128,7 +127,6 @@ export function initHeader() {
         mobileLinks.forEach(link => {
             link.classList.remove('translate-x-10', 'opacity-0');
         });
-        if(mobileExtras) mobileExtras.classList.remove('translate-y-10', 'opacity-0');
       });
     } else {
       // Close menu
@@ -139,7 +137,6 @@ export function initHeader() {
       mobileLinks.forEach(link => {
           link.classList.add('translate-x-10', 'opacity-0');
       });
-      if(mobileExtras) mobileExtras.classList.add('translate-y-10', 'opacity-0');
     }
   }
 

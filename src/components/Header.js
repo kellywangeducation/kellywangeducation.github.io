@@ -68,15 +68,6 @@ export function renderHeader() {
             <a href="#contact" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 450ms">Contact</a>
         </nav>
       </div>
-
-      <!-- Mobile Menu Footer -->
-      <div class="p-8 text-center text-slate-400 dark:text-slate-500 text-xs shrink-0 relative z-10 transition-all duration-500 transform translate-y-10 opacity-0 delay-700" id="mobile-footer">
-        <p class="mb-4 font-medium uppercase tracking-widest">&copy; 2026 Kelly Wang.</p>
-        <div class="flex justify-center gap-6">
-            <a href="#" class="hover:text-accent-pink transition-colors">Privacy</a>
-            <a href="#" class="hover:text-accent-pink transition-colors">Terms</a>
-        </div>
-      </div>
     </div>
   `;
 }
@@ -92,7 +83,6 @@ export function initHeader() {
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
   const mobileExtras = document.getElementById('mobile-extras');
-  const mobileFooter = document.getElementById('mobile-footer');
 
   // Scroll effect
   window.addEventListener('scroll', () => {
@@ -139,7 +129,6 @@ export function initHeader() {
             link.classList.remove('translate-x-10', 'opacity-0');
         });
         if(mobileExtras) mobileExtras.classList.remove('translate-y-10', 'opacity-0');
-        if(mobileFooter) mobileFooter.classList.remove('translate-y-10', 'opacity-0');
       });
     } else {
       // Close menu
@@ -151,7 +140,6 @@ export function initHeader() {
           link.classList.add('translate-x-10', 'opacity-0');
       });
       if(mobileExtras) mobileExtras.classList.add('translate-y-10', 'opacity-0');
-      if(mobileFooter) mobileFooter.classList.add('translate-y-10', 'opacity-0');
     }
   }
 

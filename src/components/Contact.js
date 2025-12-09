@@ -3,12 +3,17 @@ import { createIcons } from 'lucide';
 
 export function renderContact() {
   return `
-    <section id="contact" class="py-32 bg-transparent text-center relative overflow-hidden">
-      <!-- Decorative blob -->
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-pink/20 rounded-full blur-[120px] pointer-events-none dark:bg-accent-pink/10"></div>
-
+    <section id="contact" class="py-32 bg-transparent text-center relative">
       <div class="section-container max-w-4xl relative z-10">
-        <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-16 scroll-fade tracking-tight"><span class="text-accent-pink">Contact</span></h2>
+        <div class="relative inline-block mb-16 scroll-fade">
+          <!-- Dynamic lava lamp blob behind text. 
+               Using a wrapper for positioning to avoid conflict between centering transform and animation transform. 
+               Margin offset used for "slightly left and up" positioning (-200px is center, so -240px is offset). -->
+          <div class="absolute top-1/2 left-1/2 w-[400px] h-[400px] pointer-events-none transform-gpu" style="margin-left: -220px; margin-top: -220px;">
+            <div class="w-full h-full bg-gradient-to-tr from-accent-pink to-purple-500 opacity-40 blur-[80px] animate-lava"></div>
+          </div>
+          <h2 class="relative z-10 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"><span class="text-accent-pink">Contact</span></h2>
+        </div>
         
         <div class="flex justify-center gap-6 mb-16 scroll-fade flex-wrap">
           <button id="email-copy-btn" class="glass-panel px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-xl group border border-white/50 dark:border-white/10 flex items-center gap-3 cursor-pointer" aria-label="Copy Email">

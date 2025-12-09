@@ -110,11 +110,11 @@ export function renderExperience() {
             <div class="relative border-l-2 border-slate-200 dark:border-neutral-800 ml-6 space-y-12 pb-4">
               ${jobs.map((job, i) => `
                 <div class="pl-10 relative scroll-fade" style="transition-delay: ${i * 50}ms">
-                  <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-brand-surface dark:bg-black border-4 border-accent-pink box-content"></div>
+                  <div class="absolute -left-[13px] top-2 w-4 h-4 rounded-full bg-brand-surface dark:bg-black border-4 border-accent-pink box-content"></div>
                   
-                  <div class="glass-panel p-6 rounded-2xl hover:bg-white/90 dark:hover:bg-neutral-900/90 transition-colors group">
+                  <div class="glass-panel p-6 rounded-2xl transition-colors group">
                     <div class="flex flex-wrap justify-between items-baseline mb-2 gap-2">
-                      <h4 class="text-xl font-bold group-hover:text-accent-pink transition-colors">${job.role}</h4>
+                      <h4 class="text-xl font-bold transition-colors">${job.role}</h4>
                       <span class="text-xs font-bold tracking-wide uppercase text-accent-pink bg-accent-pink/10 px-3 py-1 rounded-full text-nowrap">${job.period}</span>
                     </div>
                     <div class="text-lg text-slate-700 dark:text-slate-300 font-medium mb-3">${job.company}</div>
@@ -139,11 +139,11 @@ export function renderExperience() {
                 <div class="relative border-l-2 border-slate-200 dark:border-neutral-800 ml-6 space-y-12 pb-4">
                 ${education.map((edu, i) => `
                     <div class="pl-10 relative scroll-fade" style="transition-delay: ${i * 50}ms">
-                    <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-brand-surface dark:bg-black border-4 border-accent-pink box-content"></div>
+                    <div class="absolute -left-[13px] top-2 w-4 h-4 rounded-full bg-brand-surface dark:bg-black border-4 border-accent-pink box-content"></div>
                     
-                    <div class="glass-panel p-6 rounded-2xl hover:bg-white/90 dark:hover:bg-neutral-900/90 transition-colors group">
+                    <div class="glass-panel p-6 rounded-2xl transition-colors group">
                         <div class="flex flex-wrap justify-between items-baseline mb-2 gap-2">
-                        <h4 class="text-xl font-bold group-hover:text-accent-pink transition-colors">${edu.degree}</h4>
+                        <h4 class="text-xl font-bold transition-colors">${edu.degree}</h4>
                         <span class="text-xs font-bold tracking-wide uppercase text-accent-pink bg-accent-pink/10 px-3 py-1 rounded-full text-nowrap">${edu.period}</span>
                         </div>
                         <div class="text-lg text-slate-700 dark:text-slate-300 font-medium mb-3">${edu.school}</div>
@@ -165,7 +165,7 @@ export function renderExperience() {
 
                 <div class="grid gap-4">
                      ${honours.map((honour, i) => `
-                        <div class="glass-panel p-5 rounded-xl hover:bg-white/90 dark:hover:bg-neutral-900/90 transition-all duration-300 border border-white/50 dark:border-white/10 hover:shadow-md scroll-fade flex flex-col sm:flex-row sm:items-center justify-between gap-2" style="transition-delay: ${i * 30}ms">
+                        <div class="glass-panel p-5 rounded-xl transition-all duration-300 border border-white/50 dark:border-white/10 scroll-fade flex flex-col sm:flex-row sm:items-center justify-between gap-2" style="transition-delay: ${i * 30}ms">
                              <div>
                                 <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm leading-tight">${honour.title}</h4>
                                 <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">${honour.org}</div>

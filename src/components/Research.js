@@ -27,18 +27,18 @@ export function renderResearch() {
             const bgClass = index === 0 ? 'bg-gradient-to-br from-white to-brand-surface dark:from-neutral-900 dark:to-black' : 'glass-panel bg-white/50 dark:bg-neutral-900/50';
             
             return `
-            <div class="${bgClass} rounded-3xl p-8 relative group overflow-hidden border border-white/50 dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 scroll-fade" style="transition-delay: ${index * 100}ms">
-              <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity transform group-hover:scale-110 duration-500">
+            <div class="${bgClass} rounded-3xl p-8 relative group overflow-hidden border border-white/50 dark:border-white/10 shadow-sm transition-all duration-500 scroll-fade" style="transition-delay: ${index * 100}ms">
+              <div class="absolute top-0 right-0 p-8 opacity-10 transition-opacity transform duration-500">
                 <i data-lucide="${area.icon}" class="w-32 h-32 text-accent-pink"></i>
               </div>
               
               <div class="relative z-10 h-full flex flex-col justify-between">
-                <div class="w-12 h-12 bg-white dark:bg-neutral-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:rotate-12 transition-transform duration-300">
+                <div class="w-12 h-12 bg-white dark:bg-neutral-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm transition-transform duration-300">
                   <i data-lucide="${area.icon}" class="w-6 h-6 text-accent-pink"></i>
                 </div>
                 
                 <div>
-                  <h3 class="text-2xl font-bold mb-3 group-hover:text-accent-pink transition-colors">${area.title}</h3>
+                  <h3 class="text-2xl font-bold mb-3 transition-colors">${area.title}</h3>
                   <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${area.desc}</p>
                 </div>
               </div>

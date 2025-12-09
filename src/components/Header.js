@@ -8,8 +8,8 @@ export function renderHeader() {
       <div class="glass-panel rounded-full px-8 h-20 flex items-center justify-between shadow-lg">
         <!-- Logo -->
         <a href="#" class="flex items-center gap-3 hover:opacity-80 transition-opacity group">
-          <img src="${Logo}" alt="Kelly Wang Logo" class="w-10 h-10 group-hover:rotate-12 transition-transform duration-300" width="40" height="40" loading="eager">
-          <span class="text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-white pb-1">Kelly Wang</span>
+          <img src="${Logo}" alt="Kelly Wang Logo" class="w-10 h-10 group-hover:scale-90 transition-transform duration-300" width="40" height="40" loading="eager">
+          <span class="text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-white pb-2">Kelly Wang</span>
         </a>
 
         <!-- Desktop Nav -->

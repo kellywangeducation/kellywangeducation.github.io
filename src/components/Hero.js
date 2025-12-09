@@ -15,7 +15,7 @@ export function renderHero() {
         <div class="order-2 md:order-1 opacity-0 animate-slide-up text-center md:text-left" style="animation-delay: 0.1s;">
           
           <div class="relative inline-block mb-8">
-            <h1 id="hero-name" class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-br from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-white dark:to-white leading-tight pb-4" style="clip-path: inset(0 100% 0 0);">
+            <h1 id="hero-name" class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-br from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-white dark:to-white leading-tight pb-6" style="clip-path: inset(0 100% 0 0);">
               Kelly Wang
             </h1>
             <canvas id="pixie-dust-canvas" class="absolute top-0 left-0 w-full h-full pointer-events-none z-20"></canvas>
@@ -33,8 +33,8 @@ export function renderHero() {
         
         <div class="order-1 md:order-2 flex justify-center opacity-0 animate-slide-up" style="animation-delay: 0.3s;">
           <div class="relative w-72 h-72 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] group">
-            <div class="absolute inset-0 bg-gradient-to-tr from-accent-pink to-purple-500 rounded-full opacity-40 blur-[100px] animate-pulse scale-150 group-hover:scale-[1.8] transition-transform duration-1000"></div>
-            <div class="relative w-full h-full rounded-[2rem] overflow-hidden border border-white/20 shadow-2xl hover:rotate-3 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-tr from-accent-pink to-purple-500 opacity-40 blur-[100px] animate-blob transition-all duration-1000"></div>
+            <div class="relative w-full h-full rounded-[2rem] overflow-hidden border border-white/20 shadow-2xl transition-all duration-500">
               <div class="absolute inset-0 bg-slate-200 dark:bg-neutral-800 animate-pulse"></div>
               <img 
                 src="${KellyImage}" 

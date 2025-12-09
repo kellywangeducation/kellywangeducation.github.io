@@ -28,10 +28,15 @@ export function renderCertifications() {
              const Wrapper = cert.link ? 'button' : 'div';
              const onclickAttr = cert.link ? `onclick="window.openCertModal('${cert.link}')"` : '';
              const cursorClass = cert.link ? 'cursor-pointer w-full text-left' : '';
+             
+             // Only apply hover effects if it is a link/button
+             const hoverClasses = cert.link ? 'hover:bg-white/90 dark:hover:bg-neutral-900/90 hover:-translate-y-2' : '';
+             const groupHoverBg = cert.link ? 'group-hover:bg-accent-pink/10' : '';
+             const groupHoverText = cert.link ? 'group-hover:text-accent-pink' : '';
 
              return `
-            <${Wrapper} ${onclickAttr} class="glass-panel p-8 rounded-3xl hover:bg-white/90 dark:hover:bg-neutral-900/90 transition-all duration-500 hover:-translate-y-2 scroll-fade relative overflow-hidden group ${cursorClass}" style="transition-delay: ${i * 100}ms">
-              <div class="absolute top-0 right-0 w-24 h-24 bg-accent-pink/5 rounded-full blur-2xl -mr-12 -mt-12 group-hover:bg-accent-pink/10 transition-colors"></div>
+            <${Wrapper} ${onclickAttr} class="glass-panel p-8 rounded-3xl ${hoverClasses} transition-all duration-500 scroll-fade relative overflow-hidden group ${cursorClass}" style="transition-delay: ${i * 100}ms">
+              <div class="absolute top-0 right-0 w-24 h-24 bg-accent-pink/5 rounded-full blur-2xl -mr-12 -mt-12 ${groupHoverBg} transition-colors"></div>
               
               <div class="relative z-10">
                 <div class="flex items-center gap-3 mb-4">
@@ -41,7 +46,7 @@ export function renderCertifications() {
                   <span class="text-sm font-bold tracking-wide uppercase text-slate-500 dark:text-slate-400">${cert.date}</span>
                 </div>
                 
-                <h3 class="text-xl font-bold mb-2 group-hover:text-accent-pink transition-colors leading-tight">${cert.name}</h3>
+                <h3 class="text-xl font-bold mb-2 ${groupHoverText} transition-colors leading-tight">${cert.name}</h3>
                 <div class="text-slate-600 dark:text-slate-400 font-medium">${cert.issuer}</div>
               </div>
             </${Wrapper}>

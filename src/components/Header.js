@@ -43,8 +43,13 @@ export function renderHeader() {
       <div class="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-accent-pink/20 rounded-full blur-[100px] pointer-events-none animate-pulse"></div>
       <div class="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] bg-purple-500/20 rounded-full blur-[80px] pointer-events-none animate-pulse" style="animation-delay: 1s"></div>
 
-      <!-- Header with Close Button -->
-      <div class="flex justify-end p-8 relative z-20">
+      <!-- Header with Toggle and Close Button -->
+      <div class="flex justify-between items-center p-8 relative z-20">
+        <button id="mobile-theme-toggle" class="p-3 rounded-full bg-slate-100/50 dark:bg-white/10 text-slate-900 dark:text-white transition-all duration-300 shadow-sm border border-white/20 hover:scale-110">
+            <i data-lucide="moon" class="w-6 h-6 hidden dark:block"></i>
+            <i data-lucide="sun" class="w-6 h-6 block dark:hidden"></i>
+        </button>
+
         <button id="mobile-menu-close" class="p-3 rounded-full bg-slate-100/50 dark:bg-white/10 text-slate-900 dark:text-white hover:rotate-90 transition-all duration-300 shadow-sm border border-white/20 hover:scale-110">
           <i data-lucide="x" class="w-8 h-8"></i>
         </button>
@@ -62,16 +67,6 @@ export function renderHeader() {
             <a href="#additional-experience" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 400ms">More Exp.</a>
             <a href="#contact" class="mobile-link text-4xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 450ms">Contact</a>
         </nav>
-        
-        <div class="mt-4 pt-8 border-t border-slate-200/50 dark:border-white/10 w-full max-w-xs transition-all duration-500 transform translate-y-10 opacity-0 delay-500" id="mobile-extras">
-            <button id="mobile-theme-toggle" class="flex items-center gap-3 text-xl font-medium text-slate-600 dark:text-slate-300 hover:text-accent-pink transition-colors">
-            <span class="dark:hidden">Dark Mode</span>
-            <span class="hidden dark:block">Light Mode</span>
-            <div class="w-10 h-6 bg-slate-200 dark:bg-white/20 rounded-full relative ml-auto">
-                <div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow-sm transition-transform duration-300 dark:translate-x-4"></div>
-            </div>
-          </button>
-        </div>
       </div>
 
       <!-- Mobile Menu Footer -->

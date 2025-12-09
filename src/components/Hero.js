@@ -52,8 +52,10 @@ export function renderHero() {
         </div>
       </div>
 
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-slate-400/50 dark:text-white/20">
-        <i data-lucide="arrow-down" class="w-8 h-8"></i>
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <div class="animate-bounce text-slate-400/50 dark:text-white/20">
+          <i data-lucide="arrow-down" class="w-8 h-8"></i>
+        </div>
       </div>
     </section>
   `;

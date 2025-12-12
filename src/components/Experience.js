@@ -16,12 +16,6 @@ export function renderExperience() {
       desc: 'Planned weekly lessons and provided feedback for 130 students in Writing and Information Literacy, Design Thinking & Visual Design courses.'
     },
     {
-      role: 'Communications Coordinator',
-      company: 'Investing in Children',
-      period: 'Sept 2024 – Jan 2025',
-      desc: 'Organized family literacy events and planned a conference for 120 children. Managed social media.'
-    },
-    {
       role: 'Research Assistant',
       company: 'STEAM-3D Maker Lab',
       period: 'Sept 2021 – April 2024',
@@ -38,12 +32,6 @@ export function renderExperience() {
       company: 'Private',
       period: 'Sept 2021 - May 2023',
       desc: 'Provided one-on-one English language instruction tailored to individual learning goals.'
-    },
-    {
-      role: 'Research Assistant',
-      company: 'Western University',
-      period: 'May 2019 - Sept 2019',
-      desc: 'Assisted with synthesis review on #MeToo movement and digital feminist research.'
     }
   ];
 

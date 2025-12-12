@@ -78,9 +78,9 @@ export function renderPublications() {
             <div class="block glass-panel p-8 rounded-3xl group scroll-fade transition-all duration-300 border border-white/50 dark:border-white/10" style="transition-delay: ${i * 50}ms">
               <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div class="space-y-2">
-                  <div class="flex items-center gap-3">
-                    <span class="text-xs font-bold tracking-wide uppercase text-accent-pink bg-accent-pink/10 px-3 py-1 rounded-full whitespace-nowrap">${paper.date}</span>
-                    <span class="text-xs font-bold tracking-wide uppercase text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-white/5 px-3 py-1 rounded-full text-center">${paper.authors}</span>
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-bold tracking-wide uppercase text-accent-pink bg-accent-pink/10 px-2.5 py-1 rounded-full">${paper.date}</span>
+                    <span class="text-xs font-bold tracking-wide uppercase text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-white/5 px-2.5 py-1 rounded-full">${paper.authors}</span>
                   </div>
                   <h3 class="text-xl md:text-2xl font-bold transition-colors leading-tight">${paper.title}</h3>
                   <div class="text-slate-600 dark:text-slate-400 font-medium">${paper.venue}</div>

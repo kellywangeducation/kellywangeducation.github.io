@@ -56,7 +56,7 @@ export function renderHeader() {
       </div>
 
       <!-- Main Nav Items -->
-      <div class="flex-1 flex flex-col justify-start px-12 pb-10 gap-6 relative z-10">
+      <div class="flex-1 min-h-0 overflow-y-auto flex flex-col justify-start px-12 pb-10 gap-6 relative z-10">
         <nav class="flex flex-col gap-6" id="mobile-nav-links">
             <a href="#about" class="mobile-link text-4xl font-bold leading-tight text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 100ms">About</a>
             <a href="#research" class="mobile-link text-4xl font-bold leading-tight text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 150ms">Research</a>

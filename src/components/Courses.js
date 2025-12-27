@@ -1,13 +1,12 @@
+import { t } from '../i18n';
+
 export function renderCourses() {
-  const courses = [
-    { code: '', name: 'Writing and Information Literacy', term: 'Teaching Assistant - Ontario Tech University' },
-    { code: '', name: 'Design Thinking & Visual Design', term: 'Teaching Assistant - Ontario Tech University' }
-  ];
+  const courses = t('courses.items');
 
   return `
     <section id="courses" class="bg-transparent py-12 md:py-20">
       <div class="section-container">
-        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 scroll-fade text-center md:text-left">Teaching</h2>
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 scroll-fade text-center md:text-left">${t('courses.title')}</h2>
         
         <div class="grid md:grid-cols-3 gap-8">
           ${courses.map((course, i) => `
@@ -17,7 +16,7 @@ export function renderCourses() {
               <div class="relative z-10">
                 <div class="text-sm font-bold tracking-wide uppercase text-accent-pink mb-4">${course.term}</div>
                 <div class="text-2xl font-bold mb-2 text-slate-900 dark:text-white transition-transform origin-left leading-tight">${course.name}</div>
-                <div class="text-lg text-slate-600 dark:text-slate-400 font-medium leading-tight mt-2">${course.code}</div>
+                ${course.code ? `<div class="text-lg text-slate-600 dark:text-slate-400 font-medium leading-tight mt-2">${course.code}</div>` : ''}
               </div>
             </div>
           `).join('')}

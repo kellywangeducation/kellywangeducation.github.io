@@ -1,68 +1,14 @@
 import { Star } from 'lucide';
 import { createIcons } from 'lucide';
+import { t } from '../i18n';
 
 export function renderAdditionalExperience() {
-  const items = [
-    {
-      role: 'Podcast Host, Education Councillor',
-      event: 'Western University’s Society of Graduate Students',
-      date: 'Sept 2025 – Present',
-      desc: 'Host of "GradCast" podcast featuring grad students. Contributor to student council discussions ensuring education students’ voices are heard.'
-    },
-    {
-      role: 'Session Developer & Presenter',
-      event: 'Rights and Responsibilities Awareness Initiative',
-      date: 'Oct 2022 – Present',
-      desc: 'Developing and presenting info sessions to support new immigrants on topics like language learning, social media safety, and citizenship.'
-    },
-    {
-      role: 'Secretary and Board Member',
-      event: 'Thames Region Ecological Association',
-      date: 'April 2023 – Present',
-      desc: 'Serving on the board since April 2023.'
-    },
-    {
-      role: 'Board Member',
-      event: 'Thames Valley Children’s Centre',
-      date: 'Nov 2023 – Dec 2024',
-      desc: 'Served from Nov 2023 – Dec 2024.'
-    },
-    {
-      role: 'Board Member',
-      event: 'Montessori Academy of London',
-      date: 'May 2023 – Oct 2024',
-      desc: 'Served from May 2023 – Oct 2024.'
-    },
-    {
-      role: 'Curriculum Developer',
-      event: 'Low Entropy',
-      date: 'May 2022 – Oct 2023',
-      desc: 'Developed asynchronous and synchronous online courses including grant writing, volunteer training, and storytelling.'
-    },
-    {
-      role: 'Host & Crew',
-      event: 'Rogers TV',
-      date: 'June 2017 – Sept 2020',
-      desc: 'Hosted "What’s Up London" for one season. Worked with audio, graphics, camera, and editing equipment.'
-    },
-    {
-      role: 'FIMS Student Ambassador',
-      event: 'Western University',
-      date: 'Sept 2017 – April 2020',
-      desc: 'Presented speeches, hosted Q&A booths, and provided a welcoming atmosphere at open house events.'
-    },
-    {
-      role: 'Class Representative',
-      event: 'Fanshawe College',
-      date: 'Sept 2017 – April 2018',
-      desc: 'Reported and resolved concerns raised by students by cooperating with student union directors.'
-    }
-  ];
+  const items = t('additional.items');
 
   return `
     <section id="additional-experience" class="py-12 md:py-20 bg-transparent">
       <div class="section-container">
-        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 scroll-fade text-center md:text-left">Additional <span class="text-accent-pink">Experience</span></h2>
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 scroll-fade text-center md:text-left">${t('additional.title')} <span class="text-accent-pink">${t('additional.highlight')}</span></h2>
         
         <div class="space-y-6">
           ${items.map((item, i) => `

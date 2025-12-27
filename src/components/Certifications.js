@@ -1,26 +1,22 @@
 import { Award } from 'lucide';
 import { createIcons } from 'lucide';
+import { t } from '../i18n';
 import Level5Cert from '../assets/KW_Level_5_Cert.pdf';
 
 export function renderCertifications() {
-  const certs = [
-    {
-      name: 'Qualifi Level 5 Diploma in Teacher Of English To Speakers Of Other Languages (TEFL)',
-      issuer: 'The TEFL Academy',
-      date: 'Completed May 2025',
-      link: Level5Cert
-    },
-    {
-      name: 'Fluent in Mandarin Chinese',
-      issuer: '',
-      date: 'Skill'
+  const certItems = t('certifications.items');
+  const certs = certItems.map((item, index) => {
+    // Inject the PDF link for the first certification (TEFL)
+    if (index === 0) {
+      return { ...item, link: Level5Cert };
     }
-  ];
+    return item;
+  });
 
   return `
     <section id="certifications" class="py-12 md:py-20 bg-transparent">
       <div class="section-container">
-        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 scroll-fade text-center md:text-left"><span class="text-accent-pink">Certifications</span> & Skills</h2>
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 scroll-fade text-center md:text-left"><span class="text-accent-pink">${t('certifications.highlight')}</span> ${t('certifications.title')}</h2>
         
         <div class="grid md:grid-cols-2 gap-8">
           ${certs.map((cert, i) => {
@@ -59,7 +55,7 @@ export function renderCertifications() {
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="window.closeCertModal()"></div>
         <div class="absolute inset-4 md:inset-10 lg:inset-20 bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl flex flex-col overflow-hidden transform scale-95 transition-transform duration-300" id="cert-modal-content">
             <div class="flex justify-between items-center p-4 border-b border-slate-200 dark:border-white/10">
-                <h3 class="font-bold text-lg">Certificate Viewer</h3>
+                <h3 class="font-bold text-lg">${t('certifications.modalTitle')}</h3>
                 <button onclick="window.closeCertModal()" class="p-2 hover:bg-slate-100 dark:hover:bg-white/10 rounded-full transition-colors">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>

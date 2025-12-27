@@ -1,5 +1,6 @@
 import { ArrowDown } from 'lucide';
 import { createIcons } from 'lucide';
+import { t } from '../i18n';
 
 import KellyImage from '../assets/Kelly Wang Image2.png';
 
@@ -16,17 +17,17 @@ export function renderHero() {
           
           <div class="relative inline-block mb-8">
             <h1 id="hero-name" class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-br from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-white dark:to-white leading-tight pb-6" style="clip-path: inset(0 100% 0 0);">
-              Kelly Wang
+              ${t('name')}
             </h1>
             <canvas id="pixie-dust-canvas" class="absolute top-0 left-0 w-full h-full pointer-events-none z-20"></canvas>
           </div>
 
           <p class="text-xl md:text-2xl lg:text-3xl text-slate-600 dark:text-slate-400 leading-relaxed mb-10 max-w-lg lg:max-w-xl mx-auto md:mx-0">
-            <span class="text-accent-pink font-semibold">Researcher & Educator</span>
+            <span class="text-accent-pink font-semibold">${t('hero.role')}</span>
           </p>
           <div class="flex flex-wrap gap-4 justify-center md:justify-start">
             <a href="#contact" class="bg-slate-900 dark:bg-white text-white dark:text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-lg hover:shadow-accent-pink/20 active:scale-95 flex items-center gap-2 text-lg">
-              Get in Touch
+              ${t('hero.cta')}
             </a>
           </div>
         </div>

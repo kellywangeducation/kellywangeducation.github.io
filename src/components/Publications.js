@@ -1,77 +1,14 @@
 import { BookOpen } from 'lucide';
 import { createIcons } from 'lucide';
+import { t } from '../i18n';
 
 export function renderPublications() {
-  const papers = [
-    {
-      title: 'TikTok as a Platform for Social Activism',
-      venue: 'Ontario Tech University’s Faculty of Education',
-      authors: 'Conference Presentation',
-      link: '#',
-      date: 'May 2023'
-    },
-    {
-      title: 'TikTok and Youth Mental Health: Its Impact, Their Stories',
-      venue: 'Canadian Society for the Study of Education',
-      authors: 'Conference Presentation',
-      link: '#',
-      date: 'May 2023'
-    },
-    {
-      title: 'Exploring TikTok, Youth Activism and Fast Fashion through an Education Lens',
-      venue: 'Western University',
-      authors: 'Student Symposium',
-      link: '#',
-      date: 'March 2023'
-    },
-    {
-      title: 'TikTok as Research Data',
-      venue: 'STEAM-3D Maker Lab',
-      authors: 'Guest Lecture',
-      link: '#',
-      date: 'Dec 2022'
-    },
-    {
-      title: 'Using TikTok and Social Media in the Classroom',
-      venue: 'STEAM-3D Maker Lab',
-      authors: 'Conference Presentation',
-      link: '#',
-      date: 'Nov 2022'
-    },
-    {
-      title: 'Artificial Intelligence and Social Media',
-      venue: 'STEAM-3D Maker Lab',
-      authors: 'Presentation',
-      link: '#',
-      date: 'Sept 2022'
-    },
-    {
-      title: 'Video lecture series for class in Japan',
-      venue: 'STEAM-3D Maker Lab',
-      authors: 'Video Series',
-      link: '#',
-      date: 'Aug 2022'
-    },
-    {
-      title: 'Digital Design Tools and Leadership',
-      venue: 'STEAM-3D Maker Lab',
-      authors: 'Conference Presentation',
-      link: '#',
-      date: 'Aug 2022'
-    },
-    {
-      title: 'Critical Digital Citizenship',
-      venue: 'STEAM-3D Maker Lab',
-      authors: 'Professional Learning Session',
-      link: '#',
-      date: 'Nov 2021'
-    }
-  ];
+  const papers = t('publications.items');
 
   return `
     <section id="publications" class="py-12 md:py-20 bg-transparent">
       <div class="section-container">
-        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 scroll-fade text-center md:text-left">Publications & <span class="text-accent-pink">Conferences</span></h2>
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 scroll-fade text-center md:text-left">${t('publications.title')} <span class="text-accent-pink">${t('publications.highlight')}</span></h2>
         
         <div class="grid gap-6">
           ${papers.map((paper, i) => `

@@ -1,25 +1,21 @@
 import { Microscope, Cpu, Globe, Code } from 'lucide';
 import { createIcons } from 'lucide';
+import { t } from '../i18n';
 
 export function renderResearch() {
-  const areas = [
-    {
-      icon: 'globe',
-      title: 'Language Learning for Seniors',
-      desc: 'Exploring methodologies and tools to support English language acquisition among the elderly population.'
-    },
-    {
-      icon: 'code',
-      title: 'Digital Tools & Education',
-      desc: 'Investigating the intersection of English language learning and modern media & digital tools.'
-    }
-  ];
+  const researchItems = t('research.items');
+  const icons = ['globe', 'code'];
+  
+  const areas = researchItems.map((item, index) => ({
+    ...item,
+    icon: icons[index] || 'microscope'
+  }));
 
   return `
     <section id="research" class="py-12 md:py-20 bg-transparent">
       <div class="section-container">
         <div class="flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between mb-12 scroll-fade text-center md:text-left">
-          <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">Research <span class="text-accent-pink">Areas</span></h2>
+          <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">${t('research.title')} <span class="text-accent-pink">${t('research.areas')}</span></h2>
         </div>
         
         <div class="grid md:grid-cols-2 gap-6 lg:gap-8 auto-rows-[minmax(200px,auto)]">

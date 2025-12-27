@@ -12,10 +12,18 @@ import { renderTerms } from './components/Terms.js'
 import { renderCertifications, initCertifications } from './components/Certifications.js'
 import { renderAdditionalExperience, initAdditionalExperience } from './components/AdditionalExperience.js'
 import { initParticles } from './components/Particles.js'
+import { onLangChange, t } from './i18n.js'
 
 const app = document.querySelector('#app');
 
 function renderPage() {
+  // Update Title and Meta Description
+  document.title = t('meta.title');
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) {
+    metaDesc.setAttribute('content', t('meta.description'));
+  }
+
   // Simple client-side router logic
   // In a production Vite app we might use a router library, but this keeps it vanilla & modular
   const path = window.location.pathname;
@@ -101,7 +109,8 @@ function attachLinkListeners() {
   footerLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
-      if (link.textContent.includes('Privacy Policy')) {
+      // Use href check instead of textContent for multilingual support
+      if (href && (href.endsWith('/privacy') || href.endsWith('/privacy.html'))) {
         e.preventDefault();
         window.history.pushState({}, '', '/privacy');
         renderPage();
@@ -117,7 +126,7 @@ function attachLinkListeners() {
                  // logic to reset icon might be needed or handled by re-render
              }
         }
-      } else if (link.textContent.includes('Terms of Use')) {
+      } else if (href && (href.endsWith('/terms') || href.endsWith('/terms.html'))) {
         e.preventDefault();
         window.history.pushState({}, '', '/terms');
         renderPage();
@@ -140,3 +149,9 @@ function attachLinkListeners() {
 // Handle navigation
 renderPage();
 window.addEventListener('popstate', renderPage);
+
+// Handle language changes
+onLangChange(() => {
+  renderPage();
+  window.scrollTo(0, 0);
+});

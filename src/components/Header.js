@@ -74,10 +74,6 @@ export function renderHeader() {
             <a href="#additional-experience" class="mobile-link text-2xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 400ms">${t('nav.more')}</a>
             <a href="#contact" class="mobile-link text-2xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 450ms">${t('nav.contact')}</a>
         </nav>
-
-        <button id="mobile-menu-close-inner" class="mt-4 text-sm font-semibold text-slate-500 dark:text-slate-400 underline underline-offset-4 self-start">
-          Close
-        </button>
       </div>
     </div>
   `;
@@ -91,7 +87,6 @@ export function initHeader() {
   const langToggle = document.getElementById('lang-toggle');
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenuClose = document.getElementById('mobile-menu-close');
-  const mobileMenuCloseInner = document.getElementById('mobile-menu-close-inner');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
 
@@ -115,7 +110,11 @@ export function initHeader() {
     }
   }
 
-  // Set initial theme
+  // Set initial theme - default to light if not set
+  if (!localStorage.theme) {
+    localStorage.theme = 'light';
+  }
+
   if (localStorage.theme === 'dark') {
     document.documentElement.classList.add('dark');
   } else {
@@ -158,7 +157,6 @@ export function initHeader() {
 
   mobileMenuBtn.addEventListener('click', toggleMenu);
   mobileMenuClose.addEventListener('click', toggleMenu);
-  mobileMenuCloseInner.addEventListener('click', toggleMenu);
   
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {

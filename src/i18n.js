@@ -310,10 +310,10 @@ export const translations = {
     }
   },
   zh: {
-    name: "王二沩",
+    name: "王凯莉",
     meta: {
-      title: "王二沩 - 研究员与教育家 | 数字简历",
-      description: "王二沩是一位研究员和教育家。探索她的出版物、研究兴趣、证书和职业经历。"
+      title: "王凯莉 - 研究员与教育家 | 数字简历",
+      description: "王凯莉是一位研究员和教育家。探索她的出版物、研究兴趣、证书和职业经历。"
     },
     nav: {
       about: "关于",

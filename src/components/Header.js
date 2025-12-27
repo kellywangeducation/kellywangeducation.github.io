@@ -62,8 +62,8 @@ export function renderHeader() {
         </button>
       </div>
 
-      <!-- Main Nav Items - Centered -->
-      <div class="flex-1 flex flex-col justify-center px-12 gap-8 relative z-10">
+      <!-- Main Nav Items -->
+      <div class="flex-1 min-h-0 overflow-y-auto flex flex-col justify-start px-12 pb-10 gap-6 relative z-10">
         <nav class="flex flex-col gap-6" id="mobile-nav-links">
             <a href="#about" class="mobile-link text-2xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 100ms">${t('nav.about')}</a>
             <a href="#research" class="mobile-link text-2xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 150ms">${t('nav.research')}</a>
@@ -74,6 +74,10 @@ export function renderHeader() {
             <a href="#additional-experience" class="mobile-link text-2xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 400ms">${t('nav.more')}</a>
             <a href="#contact" class="mobile-link text-2xl font-bold text-slate-900 dark:text-white hover:text-accent-pink transition-all duration-300 transform translate-x-10 opacity-0" style="transition-delay: 450ms">${t('nav.contact')}</a>
         </nav>
+
+        <button id="mobile-menu-close-inner" class="mt-4 text-sm font-semibold text-slate-500 dark:text-slate-400 underline underline-offset-4 self-start">
+          Close
+        </button>
       </div>
     </div>
   `;
@@ -87,6 +91,7 @@ export function initHeader() {
   const langToggle = document.getElementById('lang-toggle');
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileMenuCloseInner = document.getElementById('mobile-menu-close-inner');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
 
@@ -153,6 +158,7 @@ export function initHeader() {
 
   mobileMenuBtn.addEventListener('click', toggleMenu);
   mobileMenuClose.addEventListener('click', toggleMenu);
+  mobileMenuCloseInner.addEventListener('click', toggleMenu);
   
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {

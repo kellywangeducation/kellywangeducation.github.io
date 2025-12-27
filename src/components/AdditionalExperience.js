@@ -18,9 +18,9 @@ export function renderAdditionalExperience() {
               </div>
               
               <div class="flex-grow">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                <div class="flex flex-col items-start md:flex-row md:items-center justify-between gap-2 mb-2">
                     <h3 class="text-xl md:text-2xl font-bold transition-colors">${item.role}</h3>
-                    <span class="text-xs font-bold tracking-wide uppercase text-accent-pink bg-accent-pink/10 px-3 py-1 rounded-full whitespace-nowrap">${item.date}</span>
+                    <span class="text-[11px] md:text-xs font-bold tracking-wide uppercase text-accent-pink bg-accent-pink/10 px-2.5 py-1 rounded-full max-w-full whitespace-normal text-center">${item.date}</span>
                 </div>
                 <div class="text-lg text-slate-700 dark:text-slate-300 font-medium mb-1">${item.event}</div>
                 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">${item.desc}</p>
